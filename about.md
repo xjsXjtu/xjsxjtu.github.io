@@ -5,7 +5,7 @@ permalink: /about/
 ---
 Email : [xjs.xjtu@gmail.com](xjs.xjtu@gmail.com)
  
-Github: [xjsxjtu.github.com](https://github.com/xjsXjtu)
+Github: [xjsxjtu](https://github.com/xjsXjtu)
 
 旧Blog: [@cnblogs](http://www.cnblogs.com/xjsxjtu/)
 
