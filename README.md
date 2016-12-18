@@ -4,5 +4,5 @@
 
 ## TODO list
 
-- 添加多看评论，代替kiko-plus的disqus
+- 有必要的话，添加多看评论，代替kiko-plus的disqus
 
