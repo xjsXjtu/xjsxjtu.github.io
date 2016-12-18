@@ -1,9 +1,5 @@
 ---
 layout: post
-title:  "博客搬新家"
-date:   2016-12-18 19:00:00 +0800
-categories: jekyll
-layout: post
 title: "博客搬新家"
 description: "从cnglog迁移至github，使用Kiko-plus模板"
 date: 2016-12-18
