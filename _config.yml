@@ -30,6 +30,8 @@ url:                "https://xjsXjtu.github.io" # the base hostname & protocol f
 # url:                "http://localhost:4000" # use this url when develop
 baseurl:            "" # the subpath of your site, e.g. /blog
 
+# xiongjs: avoid collision
+port: 4567
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:           Asia/Shanghai
