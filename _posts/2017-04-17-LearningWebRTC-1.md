@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "LearningWebRTC: 音视频直播质量评估方法"
-description: "音视频测试不好干"
+title: "LearningWebRTC: 音视频质量评估方法"
+description: "直播系统中，主观、客观评估方法；主客观联系；如何保证评估的可重复性"
 date: 2017-04-17
 tags: [webrtc]
 comments: true
