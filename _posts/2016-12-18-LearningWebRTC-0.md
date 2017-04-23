@@ -37,4 +37,5 @@ LearningWebRTC系列，尽量以图的形式展示VoiceEngine、VideoEngine、Tr
  * 音频NetEQ
  * APM(Audio Processing Module)
  * 视频抗丢包
- * 拥塞控制 
+ * 拥塞控制
+ * [音视频质量评估方法](https://xjsxjtu.github.io/2017-04-17/LearningWebRTC-1/)
