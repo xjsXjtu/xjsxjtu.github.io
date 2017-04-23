@@ -1,0 +1,3 @@
+抗丢包方法：FEC，Nack，MDC，P帧分层参考（注意与SVC的不同）、
+
+拥塞控制：LBCC、DBCC、webrtc qulityMode（根据lossrate自适应分辨率、帧率）
