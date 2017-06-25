@@ -10,19 +10,17 @@ share: false
 
 ### RTP关键概念
 
-RTP session
+ * RTP session
 
 ### RTP Header关键字段
 
 ![rtp_header](/images/LearningWebRTC/rtp_header.png)
 
-SSRC
- * 不同session里SSRC是否冲突？
-
-PT(PayloadType)
- * 不同session里PT是否可能相同？
- 
-TS(TimeStamp)
+ * SSRC
+   * 不同session里SSRC是否冲突？
+ * PT(PayloadType)
+   * 不同session里PT是否可能相同？
+ * TS(TimeStamp)
 
 
 ### RTCP常用类型
@@ -32,9 +30,7 @@ TS(TimeStamp)
 #### QoS(Quality of Service)
 
  * SR(Sender Report)
-
  * RR(Receiver Report)
-
  * XR...
 
 ### 参考
