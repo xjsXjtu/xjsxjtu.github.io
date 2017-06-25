@@ -7,6 +7,10 @@ tags: [webrtc]
 comments: true
 share: false
 ---
+
+* auto-gen TOC:
+{:toc}
+
 ### 音视频直播系统简略框图
 
 ![直播系统简略框图](/images/LearningWebRTC/live-system-models.png)

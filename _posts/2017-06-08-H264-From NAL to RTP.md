@@ -8,6 +8,10 @@ comments: true
 share: false
 ---
 
+* auto-gen TOC:
+{:toc}
+
+
 最近调试一个WebRTC H264解码的问题，熟悉了H264码率结构及RTP打包协议。这里梳理、总结一下，供以后参考。
 
 ### H264 NAL(Network Abstraction Layer)

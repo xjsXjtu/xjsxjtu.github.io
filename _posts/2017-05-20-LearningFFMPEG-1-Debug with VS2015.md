@@ -7,6 +7,10 @@ tags: [ffmpeg]
 comments: true
 share: false
 ---
+
+* auto-gen TOC:
+{:toc}
+
 ### MOTIVATION
 
 相比于GDB+VIM，VS2015在读代码方面还是方便太多了。

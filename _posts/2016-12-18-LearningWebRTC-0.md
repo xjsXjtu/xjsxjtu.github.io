@@ -8,6 +8,9 @@ comments: true
 share: false
 ---
 
+* auto-gen TOC:
+{:toc}
+
 围绕[WebRTC官网](https://webrtc.org/architecture/)上关于WebRTC架构图，
 LearningWebRTC系列，尽量以图的形式展示VoiceEngine、VideoEngine、Transport的native实现，简述原理。
 

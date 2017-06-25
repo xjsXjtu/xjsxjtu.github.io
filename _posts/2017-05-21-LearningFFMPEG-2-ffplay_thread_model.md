@@ -7,6 +7,10 @@ tags: [ffmpeg]
 comments: true
 share: false
 ---
+
+* auto-gen TOC:
+{:toc}
+
 ### MOTIVATION
 
 ffplay是FFMPEG提供的一个视频播放器，支持本地文件和远程URL播放。代码质量达到工业级，值得学习借鉴。
