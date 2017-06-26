@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LearningWebRTC: RTP/RTCP协议"
-description: "TODO"
+description: "总结RTP协议关键概念，Header关键字段，RTCP常见作用。 对于协议中理解比较模糊的地方，查看WebRTC M59相关实现。"
 date: 2017-06-25
 tags: [webrtc]
 comments: true
