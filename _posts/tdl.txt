@@ -1,3 +1,41 @@
-抗丢包方法：FEC，Nack，MDC，P帧分层参考（注意与SVC的不同）、
 
-拥塞控制：LBCC、DBCC、webrtc qulityMode（根据lossrate自适应分辨率、帧率）
+WebRTC内部模块
+ * 拥塞控制：
+   * LBCC 
+   * DBCC
+   * 总体架构（？可能在视频发送和接收的流程图里有，不需要专门的图）
+ * 抗丢包： 
+   * FEC
+   * NACK
+   * MDC
+   * SVC Temporal Scalable （直接链接H264 SVC）
+ * 码率&帧率控制
+   * MO动态调整帧率、码率：FrameDropper、SetRate
+   * X264、VTB码率控制参数
+ * 视频JB
+ * 音频APM
+   * 总体流程（aecm ppt里的那张图）
+   * AEC3
+   * AECM
+   * NS
+   * AGC
+   * VAD
+ * 音视频同步
+   * ffplay音视频同步，pull/push模式（播放器节奏）
+   * WebRTC里基于RTP的音视频同步
+ * WebRTC信令
+   * SDP信令，TURN/STUN/ICE等，及Demo（WebRTC Demo(PeerConnectionClient@PC, AppRTCMobile@Android)）
+ * 其他（低优先级）
+   * OpenGLES
+     * Android视频采集，包括美颜
+     * Android视频渲染
+   * NetEQ
+   
+WebRTC架构
+ * 视频发送
+ * 视频接收
+ * 音频发送
+ * 音频接收
+ * 代码封装层次（以模块为单元，如RTP_RTCP）
+
+整理博客，专栏索引等
