@@ -46,7 +46,7 @@ LearningWebRTC系列，尽量以图的形式展示VoiceEngine、VideoEngine、Tr
      * NetEQ
    * 视频
      * JitterBuffer
-     * 码率、帧率控制
+     * H264码率控制
      * OpenGLES采集
      * OpenGLES渲染
    * 音视频同步
