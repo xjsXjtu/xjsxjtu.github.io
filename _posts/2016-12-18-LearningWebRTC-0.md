@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LearningWebRTC(0):总览"
+title: "LearningWebRTC:总览"
 description: "系列的开端，总结WebRTC native层实现，主要包括音视频采集、处理、传输、渲染。"
 date: 2016-12-18
 tags: [webrtc]
@@ -29,16 +29,32 @@ LearningWebRTC系列，尽量以图的形式展示VoiceEngine、VideoEngine、Tr
 
 # 文章列表
 
- * 音频发送
- * 音频接收
- * 视频发送
- * 视频接收
- * RTP/RTCP
- * 音视频同步
- * 视频JitterBuffer
- * 视频OpenGLES渲染
- * 音频NetEQ
- * APM(Audio Processing Module)
- * 视频抗丢包
- * 拥塞控制
- * [音视频质量评估方法](https://xjsxjtu.github.io/2017-04-17/LearningWebRTC-1/)
+ * 架构
+   * [音频总览](https://xjsxjtu.github.io/2017-07-01/LearningWebRTC-AudioArchitecture/)
+   * 视频总览
+ * 模块
+   * 音频
+     * APM(Audio Processing Module)总览
+       * AEC
+       * AECM
+       * NS
+       * AGC
+       * VAD
+       * Beamformer
+       * TransientSuppressor
+     * Opus
+     * NetEQ
+   * 视频
+     * JitterBuffer
+     * 码率、帧率控制
+     * OpenGLES采集
+     * OpenGLES渲染
+   * 音视频同步
+   * [RTP/RTCP](https://xjsxjtu.github.io/2017-06-25/LearningWebRTC-RTP-RTCP/)
+   * 抗丢包
+     * FEC
+     * NACK
+     * MDC
+     * SVC
+   * 拥塞控制
+   * [QoE： 音视频质量评估方法](https://xjsxjtu.github.io/2017-04-17/LearningWebRTC-1/)
