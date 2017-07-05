@@ -59,8 +59,8 @@ Wiener滤波器同样使用均方误差最小作为优化目标，不过Wiener�
      * 根据farendVAD和DT结果，决定Winer滤波”置信度“(suppressGain).
    * AECM里没有显式的检测DT，而是根据large variations in estimated echo来判断DT的存在 
  * Adaptive Filtering
- 	* NLMS：更新滤波器系数，估算回声能量谱
- 	* 计算Winer滤波器系数，并使用NLP(Non-Linear Process)限幅。
+   * 迭代更新NLMS滤波器系数，估算回声能量谱
+   * 计算Winer滤波器系数，并使用NLP(Non-Linear Process)限幅。
  * CNG(Comfort Noise Generator)
    * 原因： Winer filter抑制回声时，也抑制了噪声，需要补回来
    * 幅度谱根据nearend能量估计，相位谱为均匀分布； 然后算出实部虚部值，加到Winer滤波的结果里
@@ -68,7 +68,7 @@ Wiener滤波器同样使用均方误差最小作为优化目标，不过Wiener�
 
 ### 可能的优化方法
  * 延迟估计是否准确，最大延迟是否超过代码的限度
- * echo路径变化时，如插拔耳机，是否对滤波器做了重新收敛？？
+ * echo路径变化时，如插拔耳机，是否对滤波器做了重新收敛
  * 提高near VAD + double talk检测准确性。
  * 强制用AEC/AEC3替换AECM
 
