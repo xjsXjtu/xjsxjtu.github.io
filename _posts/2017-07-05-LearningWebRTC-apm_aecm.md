@@ -2,7 +2,7 @@
 layout: post
 title: "LearningWebRTC: AECM"
 description: "总结WebRTC M59 AECM(Acoustic Echo Control for Mobile)算法流程"
-date: 2017-07-01
+date: 2017-07-05
 tags: [webrtc]
 comments: true
 share: false
