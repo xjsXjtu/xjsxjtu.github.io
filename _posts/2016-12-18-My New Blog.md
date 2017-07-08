@@ -3,7 +3,7 @@ layout: post
 title: "博客搬新家"
 description: "从cnglog迁移至github，使用Kiko-plus模板"
 date: 2016-12-18
-tags: [misc, github]
+tags: [misc]
 comments: true
 share: false
 ---
