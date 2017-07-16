@@ -11,7 +11,7 @@ share: false
 * auto-gen TOC:
 {:toc}
 
-关于WebRTC FEC的介绍，参考[这里](xxxx)
+关于WebRTC FEC的介绍，参考[这里](https://xjsxjtu.github.io/2017-07-16/LearningWebRTC-fec/)
 
 这篇文章可以认为是上文的一部分，即FEC自适应调参。
 

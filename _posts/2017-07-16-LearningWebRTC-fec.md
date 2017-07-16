@@ -120,7 +120,7 @@ WebRTC中，FEC rate必须是网络自适应的。对于WebRTC二次开发，可
  * 视频卡顿次数与卡顿时长
  * FEC带宽
  
-网络自适应FEC rate参考[这里](xxxx)
+网络自适应FEC rate参考[这里](https://xjsxjtu.github.io/2017-07-16/LearningWebRTC-adafec/)
 
 #### Bursty/Random mask type
 
