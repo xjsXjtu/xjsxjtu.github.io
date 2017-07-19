@@ -45,6 +45,8 @@ Wiener滤波器同样使用均方误差最小作为优化目标，不过Wiener�
   
 ### 关键步骤
 
+![aecm_modules](/images/LearningWebRTC/aecm_modules.png)
+
  * 使用Hanning窗的DFT变换
    * 防止频谱泄露
  * delay estimate
@@ -53,7 +55,7 @@ Wiener滤波器同样使用均方误差最小作为优化目标，不过Wiener�
      * AECM在频域做，因此最小延迟单位为一个block（64samples = 4ms），默认支持最大延迟为100block，即400ms。
    * 方法： 分别求远端信号和近端采集信号的二值谱，并根据二值谱的相似程度（XOR后1的个数）进行匹配。
  * Farend VAD检测 & DT检测：
-   ![aecm_delay_est](/images/LearningWebRTC/aecm_delay_est.png)
+   ![aecm_farvad](/images/LearningWebRTC/aecm_farvad.png)
    * 作用：
      * 只有区域③允许更新滤波器系数，其他区域必须停止更新(即NLMS stepsize=0）； 
      * 根据farendVAD和DT结果，决定Winer滤波”置信度“(suppressGain).
