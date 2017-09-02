@@ -103,8 +103,8 @@ share: false
    * ![jitter](/images/LearningWebRTC/jitter.png)
    * D(i-1, i)，表示第i、i-1个RTP包传输时间的差。由于Encoder/Decoder时钟不一致，无法准确计算，因此用RTP TS和包到达时间近似表示。
 
-#### 如何把RTP TS映射成本地时间
- * 根据RTCP SR，把RTP TS映射为本地时间，是音视频同步的基础。
+#### 如何把RTP TS映射成NTP时间
+ * 根据RTCP SR，把RTP TS映射为NTP时间（这里只能映射为Encoder端的，而非Decoder端），是音视频同步的基础。
  * ![ts_2_ntp](/images/LearningWebRTC/ts_2_ntp.png)
    * Tsr, Msr分别表示上一个RTCP SR里的NTP时间和RTP TS. 一个TS为M的RTP对应的NTP时间为T。
 
