@@ -38,7 +38,7 @@ NACK Request是Payload Type为PT_RTPFB=205的RTCP包，一般与其他RTCP包打
 一个只包含NACK Request的RTCP包的格式如下，PID表示丢包的SN，BLP为SN之后16个RTP包丢包的bit mask。
 其他字段的含义参考[RFC4588 6.2.1.  Generic NACK](https://tools.ietf.org/html/rfc4585#section-6.2.1)
 
-```cpp
+```
     0                   1                   2                   3
     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
