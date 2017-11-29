@@ -37,19 +37,22 @@ share: false
   * RFC6184的方案
     * 打包方法
       * Single NAL Unit Packet
-        * 一个NALU严格对应一个RTP包
+        * 一个NALU严格对应一个RTP包。
+        * RTP Payload第一个Byte即该slice的NALU header。
         * 如果一个NALU大于MTU，那么OS会把RTP拆成多个UDP发送。
       * Aggregation Packets
         * 为了提高传输效率，多个NALU组成一个RTP包，如size较小的SPS、PPS。
         * STAP-A：只能把相同时间的NALU聚合在一个RTP包里
           * ![STAP-A](/images/LearningVideoCodec/STAP-A-NAL.png)
+          * STAP-A NAL HDR里记录了type为24.
+          * “NALU 1/2 HDR"为各个slice自己的NALU header。
         * STAP-B，MTAP16，MTAP24暂没研究
       * Fragmentation Units
         * 为了在RTP层做generic FEC抗丢包，把一个NALU拆成多个RTP包。
         * FU-A：
           * ![FU-A](/images/LearningVideoCodec/FU-A.png)
-          * FU indicator就是NALU header
-          * FU header如下图，表征的是一个NALU被切分的起始RTP包（S）和结束RTP包（E）
+          * FU indicator是一个NALU header： F和NRI字段从slice的NALU header里抄过来；type为为28。
+          * FU header如下图，表征的是一个NALU被切分的起始RTP包（S）和结束RTP包（E）；type为slice的NALU header里的type。
             * ![FU-Header](/images/LearningVideoCodec/FU-Header.png)
         * FU-B暂无研究。
       * 各种打包方法对应的NALU type为：
