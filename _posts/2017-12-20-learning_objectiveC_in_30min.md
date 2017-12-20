@@ -41,7 +41,7 @@ share: false
 @implemetaion XYZPerson
 
 - (void)saySomething:(NSString *)greeting {
-NSLog(@"%@", greeting);
+    NSLog(@"%@", greeting);
 }
 
 @end
@@ -66,12 +66,12 @@ NSLog(@"%@", greeting);
 
 ```
 @interface SomeClass : NSObject {
-NSString *_myNonPropertyInstanceVariable;
+    NSString *_myNonPropertyInstanceVariable;
 }
 @end
 
 @implementation SomeClass {
-NSString *_anotherCustomInstanceVariable;
+    NSString *_anotherCustomInstanceVariable;
 }
 @end
 ```
@@ -92,7 +92,7 @@ NSObject * __weak weakVariable;
 ```
 NSObject *cachedObject = self.someWeakProperty;           // 1
 if (cachedObject) {                                       // 2
-[someObject doSomethingImportantWith:cachedObject];   // 3
+    [someObject doSomethingImportantWith:cachedObject];   // 3
 }                                                         // 4
 cachedObject = nil;                                       // 5
 ```
@@ -125,7 +125,7 @@ cachedObject = nil;                                       // 5
 
 @implementation XYZPerson (XYZPersonNameDisplayAdditions)
 - (NSString *)lastNameFirstNameString {
-return [NSString stringWithFormat:@"%@, %@", self.lastName, self.firstName];
+    return [NSString stringWithFormat:@"%@, %@", self.lastName, self.firstName];
 }
 @end
 ```
