@@ -63,6 +63,7 @@ NSLog(@"%@", greeting);
 - @property会自动生成getter和setter。（@synthesize 没有仔细研究）
 - OC可以不用@property定义成员变量，也可以在直接定义
   - 但是，@property是best practice!
+
 ```
 @interface SomeClass : NSObject {
 NSString *_myNonPropertyInstanceVariable;
@@ -79,6 +80,7 @@ NSString *_anotherCustomInstanceVariable;
 - ==Object Ownership==(非常重要！！)
   - OC里的指针，默认都是strong reference，相当于CPP的shared_ptr
   - ARC(Automatic Referce counting)为OC的内存管理机制；为了避免strong reference cycle导致的内存泄漏，需要使用weak reference，类似于CPP的weak_ptr
+
 ```
 @property (weak) id delegate;
 // or
@@ -86,6 +88,7 @@ NSObject * __weak weakVariable;
 ```
 
   - 访问weak reference时，为了保证使用过程中不被dealloc，需要先用strong reference保留一份
+
 ```
 NSObject *cachedObject = self.someWeakProperty;           // 1
 if (cachedObject) {                                       // 2
@@ -93,6 +96,7 @@ if (cachedObject) {                                       // 2
 }                                                         // 4
 cachedObject = nil;                                       // 5
 ```
+
   - weak指针所指向的对象销毁以后，weak指针自动置为nil(意味着再次给它发消息，会导致抛异常)
   - OC有些类不能用weak修饰，只能用unsafe(NSObject * __unsafe_unretained unsafeReference;),这时如果对象被销毁，那么unsafeReference就会是野指针，发消息会导致崩溃，而不是抛异常
 - @property可以用(copy)修饰符，此时等号操作符表示深拷贝；否则为浅拷贝。
@@ -107,6 +111,7 @@ cachedObject = nil;                                       // 5
   - Category名称必须是独一无二的
     - Category也应该有自己的前缀，因为一个类可能有多个Category，没有前缀容易命名冲突。
     - 如果命名冲突，则对象接收消息为“未定义行为”
+
 ```
 // YZPerson+XYZPersonNameDisplayAdditions.h
 #import "XYZPerson.h"
@@ -124,6 +129,7 @@ return [NSString stringWithFormat:@"%@, %@", self.lastName, self.firstName];
 }
 @end
 ```
+
 - Class Extension,也叫匿名Category，只能在compiler-time提供对已有类的扩展。
   - 篇幅不多，也没有仔细看，估计用的不多（猜测类似于Java里的extend关键字，以及于CPP里的实现继承？）
 
@@ -132,6 +138,7 @@ return [NSString stringWithFormat:@"%@, %@", self.lastName, self.firstName];
 
 - 内容：接口@protocol，
 - @protocol:类似于CPP的纯虚类，Java的interface，比较好理解
+
 ```
 // MyClass实现MyProtocol
 @interface MyClass : NSObject <MyProtocol>
