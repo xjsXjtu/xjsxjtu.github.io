@@ -111,6 +111,11 @@ ReceiveSideCongestionController把包的大小和到达时间转发给RemoteBitr
 
 BC模块得到丢包率后，根据前面的公式更新带宽，并得到DBCC结果取较小值。很简单，不画图了。
 
+
+### 遗留问题
+
+ * 如果同时有两路视频发送，意味着发送端和接收端分别有两个CC，那最终估算的带宽如何融合？估算的带宽如何分配？
+
 ### 参考
  
  * [Paper @2016: Analysis and Design of the Google Congestion Control for Web Real-time Communication (WebRTC)](http://c3lab.poliba.it/images/6/65/Gcc-analysis.pdf)
