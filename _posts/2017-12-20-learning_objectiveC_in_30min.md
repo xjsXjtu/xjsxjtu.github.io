@@ -21,11 +21,12 @@ share: false
 - 内容：声明、定义类
 - @interface关键词，类似于CPP里的class关键词，与Java的interface关键词完全不同。
 - 所有OC类都继承自NSObject(提供init/alloc/new等方法)，类似于Java所有类都继承java.lang.Object
-- @property用于定义成员变量，并且自动生成getter、setter方法。
+- @property用于定义成员变量(相当于CPP在头文件里定义成员变量）；@synthesis会生成getter、setter方法，如果没有显示写@synthesis，编译器会自动合成getter、setter。
   - 直到XCode8以后才支持静态成员变量
 - 成员函数: -表示对象方法，+表示类方法。
 - OC所有的对象变量，都用指针表示，不像CPP还有引用等
 - OC没有namespace，所有类都不能冲突，所以一般用类前缀区分，如题库用的TTLLiveEngine
+- coding style: 由于OC不支持private、public修饰符，一般把public的成员变量(property)和成员方法放在@interface里，private则直接放在@implemention里
 
 ```
 // XYZPerson.h
@@ -60,7 +61,6 @@ share: false
 ## Encapsulating Data
 
 - 内容：成员变量的访问；OC内存管理
-- @property会自动生成getter和setter。（@synthesize 没有仔细研究）
 - OC可以不用@property定义成员变量，也可以在直接定义
   - 但是，@property是best practice!
 
