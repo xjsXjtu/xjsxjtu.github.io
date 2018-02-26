@@ -97,7 +97,7 @@ if (cachedObject) {                                       // 2
 cachedObject = nil;                                       // 5
 ```
 
-  - weak指针所指向的对象销毁以后，weak指针自动置为nil(意味着再次给它发消息，会导致抛异常)
+  - weak指针所指向的对象销毁以后，weak指针自动置为nil(“A message to nil does nothing and returns nil, Nil, NULL, 0, or 0.0”)。
   - OC有些类不能用weak修饰，只能用unsafe(NSObject * __unsafe_unretained unsafeReference;),这时如果对象被销毁，那么unsafeReference就会是野指针，发消息会导致崩溃，而不是抛异常
 - @property可以用(copy)修饰符，此时等号操作符表示深拷贝；否则为浅拷贝。
 
